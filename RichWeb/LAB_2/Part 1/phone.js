@@ -1,8 +1,10 @@
-//function to error check the entries 
+ 
 function validateForm() {
-  let namey = document.forms["myForm"]["Name"].value;
-  if (namey == "" || namey.length > 20) {
-    alert("Name must be filled out\nName is 20 Characters max");
+  var RegExpression = /^[a-zA-Z\s]*$/;
+
+  let namey = document.forms["myForm"]["name"].value;
+  if (namey == "" || namey.length >= 20 || /^[A-Za-z\s]*$/.test(namey) == false ) {
+    alert("Name must be filled out\nName is 20 Characters max\nCan only have letters and Spaces");
     return false;
   }
 
@@ -13,12 +15,13 @@ function validateForm() {
   }
   
   let emaily = document.forms["myForm"]["email"].value;
-  if (emaily == "") {
+  if (emaily == "" || emaily >= 40) {
     alert("Email must be filled out");
+    console.log("dosds,cv ")
     return false;
   }
-  
-  
+  // console.log("sdfsdv")
+  addContact()
 }
 
 function addContact(){
@@ -41,6 +44,26 @@ function addContact(){
     cell1.innerHTML = document.getElementById("name").value;
     cell2.innerHTML = document.getElementById("mobile").value; 
     cell3.innerHTML = document.getElementById("email").value;
+    
+    // let namey = document.forms["myForm"]["Name"].value;
+    // if (namey == "" || namey.length > 20) {
+    //   alert("Name must be filled out\nName is 20 Characters max");
+    //   return false;
+    // }
+  
+    // let phoney = document.forms["myForm"]["mobile"].value;
+    // if (phoney == "" || phoney.length != 10)  {
+    //   alert("Phone must be filled out\nPhone must be 10 numbers");
+    //   return false;
+    // }
+    
+    // let emaily = document.forms["myForm"]["email"].value;
+    // if (emaily == "") {
+    //   alert("Email must be filled out");
+    //   console.log("dosds,cv ")
+    //   return false;
+    // }
+    
 }
 
 
