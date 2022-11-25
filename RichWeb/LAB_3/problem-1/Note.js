@@ -1,4 +1,7 @@
-
+let Buttons = document.createElement("button1")
+rxjs.fromEvent(Buttons, 'click')
+.subscribe(() => addElement()
+);
 function addElement () {
     // create a new div element
     let newtextArea = document.createElement("textarea")
@@ -17,7 +20,10 @@ function addElement () {
     
     // add the delete node to the newly created newtextArea and function 
     let Ndelete = document.createElement("button");
-    Ndelete.onclick=()=>{newtextArea.remove(); colourTag.remove(); colorChange.remove(); Ndelete.remove();}
+    // Ndelete.onclick=()=>{newtextArea.remove(); colourTag.remove(); colorChange.remove(); Ndelete.remove();}
+    rxjs.fromEvent(Ndelete, 'click')
+    .subscribe(() => delleting()
+    );
     Ndelete.innerHTML="Delete"
     Ndelete.style.display="block"
 
@@ -28,7 +34,11 @@ function addElement () {
 
     let colorChange = document.createElement("button")
     colorChange.innerHTML="Change Colour"
-    colorChange.onclick=()=>{newtextArea.style.backgroundColor=colourTag.value;}
+    //colorChange.onclick=()=>{newtextArea.style.backgroundColor=colourTag.value;}
+    rxjs.fromEvent(colorChange, 'click')
+    .subscribe(() => cwolower()
+    );
+
 
     let breaker = document.createElement("br")
     let breaker1 = document.createElement("br")
@@ -42,5 +52,13 @@ function addElement () {
     document.body.after(breaker,colorChange)
     document.body.after(breaker1,breaker)
     
+    function delleting () {
+        // 
+        newtextArea.remove(); colourTag.remove(); colorChange.remove(); Ndelete.remove();
+    }
+    function cwolower () {
+        // 
+        newtextArea.style.backgroundColor=colourTag.value;
+    }
 }
 
