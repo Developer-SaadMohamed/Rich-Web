@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ 
+.container {
+    /* width: 900px; */
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.top-container {
+    width: 75%;
+    height: 50%;
+    border-radius: 10px;
+    background: silver;
+    margin: auto;
+}
+
+.timeInput {
+    border-radius: 10px;
+    border: 5px solid grey;
+}
+
+.spacer {
+    display: inline-block;
+    font-size: 50px;
+}
+
+button {
+    width: 40%;
+    height: 40%;
+    margin: 15px auto;
+    color: black;
+    background-color: #fff;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: solid 5px grey;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #adc9ff;
+}
+
+input {
+    width: 80px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+#startCountdown {
+    background: #fff;
+    margin-top: 5%;
+    height: 25%;
+}
+
+#block {
+    display: inline-block;
+}
+
+.countdownText {
+    margin-top: 25px;
+    color: #737373;
+    font-size: 45px;
+}
+
+/* user-hour = userHour 
+userMinute = userMinute 
+userSecond = userSecond  
+countdown-text = countdownText
+countdown-container = countdownContainer
+start-countdown = startCountdown
+time-input = timeInput */

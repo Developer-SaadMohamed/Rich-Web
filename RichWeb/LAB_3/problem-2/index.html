@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Timer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top-container">
+            <input type="number" id="userHour" class="timeInput" name="hour" placeholder="HH">
+            <div class="spacer">:</div>
+            <input type="number" id="user-minute" class="timeInput" name="minute" placeholder="MM" max="59">
+            <div class="spacer">:</div>
+            <input type="number" id="user-second" class="timeInput" name="second" placeholder="ss" max="59">
+            <br>
+            <button id="startCountdown">Start Countdown</button>
+        </div>
+        <div class="countdownContainer">
+            <span id="hours" class="countdownText"></span>
+            <span id="minutes" class="countdownText"></span>
+            <span id="seconds" class="countdown-text"></span>
+        </div>
+    </div>
+
+    <script src="https://npmcdn.com/@reactivex/rxjs@5.0.0-beta.3/dist/global/Rx.umd.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+<!-- user-hour = userHour 
+userMinute = userMinute 
+userSecond = userSecond  
+countdown-text = countdownText
+countdown-container = countdownContainer
+start-countdown = startCountdown
+time-input = timeInput
+-->
