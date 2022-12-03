@@ -12,16 +12,16 @@
         <div class="top-container">
             <input type="number" id="userHour" class="timeInput" name="hour" placeholder="HH">
             <div class="spacer">:</div>
-            <input type="number" id="user-minute" class="timeInput" name="minute" placeholder="MM" max="59">
+            <input type="number" id="userMinute" class="timeInput" name="minute" placeholder="MM" max="59">
             <div class="spacer">:</div>
-            <input type="number" id="user-second" class="timeInput" name="second" placeholder="ss" max="59">
+            <input type="number" id="userSecond" class="timeInput" name="second" placeholder="ss" max="59">
             <br>
-            <button id="startCountdown">Start Countdown</button>
+            <button id="startCountdown">Start</button>
         </div>
         <div class="countdownContainer">
             <span id="hours" class="countdownText"></span>
             <span id="minutes" class="countdownText"></span>
-            <span id="seconds" class="countdown-text"></span>
+            <span id="seconds" class="countdownText"></span>
         </div>
     </div>
 
@@ -29,12 +29,3 @@
     <script src="index.js"></script>
 </body>
 </html>
-
-<!-- user-hour = userHour 
-userMinute = userMinute 
-userSecond = userSecond  
-countdown-text = countdownText
-countdown-container = countdownContainer
-start-countdown = startCountdown
-time-input = timeInput
--->

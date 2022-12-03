@@ -2,7 +2,7 @@
 const startButton = document.querySelector('#startCountdown');
 const startObs = Rx.Observable.fromEvent(startButton, 'click');
 
-// Get users hour, minutes, and seconds input
+//input for hours minuuts abd seconds from the user..
 const userInputHr = document.querySelector('#userHour');
 const userInputMin = document.querySelector('#userMinute');
 const userInputSec = document.querySelector('#userSecond');
@@ -19,19 +19,22 @@ const toTime = (time) => ({
     seconds: Math.floor(time % 3600 % 60)
 });
 
-// Function to render the time to the UI
+// function that apouts the time to the console 
 const render = (time) => {
-    // If there is still time left display it
-    if((time.seconds) > 0 ||
-    (time.minutes) > 0 ||
-    (time.hours) > 0) {
+    //  display the remining time 
+    if((time.seconds) > 0 || (time.minutes) > 0 || (time.hours) > 0) {
+        
         let hourValue = time.hours;
         hours.innerHTML = hourValue + ":";
+
         let minuteValue = time.minutes;
         minutes.innerHTML = minuteValue + ":";
-        seconds.innerHTML = time.seconds;
+
+        let secondValue = time.seconds;
+        seconds.innerHTML = secondValue;
+
     } else {
-        // Time is up show all zeros
+        // when time is over display all seros 
         hours.innerHTML = "0:";
         minutes.innerHTML = "0:";
         seconds.innerHTML = "0";
@@ -41,34 +44,24 @@ const render = (time) => {
 // Subscribe to the start button click
 app$ = startObs.subscribe(() => {
 
-    // Translate user input into milliseconds
+    // converting user input into milliseconds
     let userHour = (userInputHr.value * 60 * 60 * 1000);
     let userMin = (userInputMin.value) * 60 * 1000;
     let userSec = (userInputSec.value) * 1000;
 
-    // Get total number of seconds to run countdown for
+    // computing total number of seconds from time inputed 
     let total = userSec + userMin + userHour;
     total = total / 1000;
 
-    // Set interval to 1 second
     let timer$ = Rx.Observable.interval(1000);
 
     timer$
         .take(total)
-        .map((val) => (total - 1) - val) // decrement until timer hits 0
-        .map(toTime) // map time to hours minutes and seconds
+        .map((val) => (total - 1) - val)
+        .map(toTime)
         .subscribe((time) => {
             toTime(time);
             render(time);
             console.log('Countdown', time);
         });
 });
-
-
-// user-hour = userHour 
-// user-minute = userMinute 
-// user-second = userSecond  
-// countdown-text = countdownText
-// countdown-container = countdownContainer
-// start-countdown = startCountdown
-// time-input = timeInput

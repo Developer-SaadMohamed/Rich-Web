@@ -2,12 +2,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: #737373;
 }
 
  
 .container {
     /* width: 900px; */
     width: 70%;
+    height: 90%;
     margin: 50px auto;
     text-align: center;
 }
@@ -16,18 +18,20 @@
     width: 75%;
     height: 50%;
     border-radius: 10px;
-    background: silver;
+    background-color: #fff;
     margin: auto;
 }
 
 .timeInput {
     border-radius: 10px;
     border: 5px solid grey;
+    background-color: #fff;
 }
 
 .spacer {
     display: inline-block;
     font-size: 50px;
+    background-color: #fff;
 }
 
 button {
@@ -37,7 +41,7 @@ button {
     color: black;
     background-color: #fff;
     text-align: center;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: bold;
     border-radius: 10px;
     border: solid 5px grey;
@@ -68,7 +72,7 @@ input {
 
 .countdownText {
     margin-top: 25px;
-    color: #737373;
+    color: white;
     font-size: 45px;
 }
 
