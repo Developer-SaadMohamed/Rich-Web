@@ -14,14 +14,14 @@
 
     <div class="center" id="addContact">
 
-        <form name="myForm" action="/action_page.php">
+        <form name="myForm">
 
             <!--Input fields for Name Mobile Email and button -->
             <input type="text"  placeholder="Name"       id="name"      title="Less than or equal 20 characters"            name="name">
             <input type="number"  placeholder="Mobile No." id="mobile"    title="Equal 10 characters in length"               name="mobile"> 
             <input type="email" placeholder="Email"      id="email"     title="Less than 40 characters and correct format"  name="email">
             <!-- Button for onContact()  -->
-            <button type="submit" id="submit" onclick="validateForm()">Add Contact</button>
+            <button id="submit" onclick="validateForm()">Add Contact</button>
         </form>
 
     </div>
